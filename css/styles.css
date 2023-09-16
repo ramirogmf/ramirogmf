@@ -1,0 +1,152 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/fondo.webp'); /* Imagen de fondo en toda la pantalla */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fija la imagen de fondo */
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Alto total de la pantalla */
+}
+
+.column-left {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('img/placa.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 25vh;
+    width: 493px;
+    height: 310px;
+    width: 50%; /* Ocupa la mitad de la pantalla */
+   }
+
+.column-left img {
+    max-width: 100%; /* Asegura que la imagen SVG no exceda el ancho de la columna */
+    height: auto; /* Ajusta la altura automáticamente */
+}
+
+.column-right {
+    width: 50%; /* Ocupa la otra mitad de la pantalla */
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco con transparencia */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 150px;
+    height: 120px;
+    background-image: url('img/iso.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.menu a {
+    width: 70vw; /* Ancho fijo de 308px para los botones */
+    max-width: 400px; /* Ancho máximo para evitar que se estire demasiado */
+    height: 45px;
+    border: 1px solid #7BB24D;
+    background-color: transparent;
+    text-align: center;
+    line-height: 45px;
+    color: #7BB24D;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    margin: 5px 0;
+    text-transform: uppercase;
+    overflow: hidden; /* Oculta el texto que desborda */
+    white-space: nowrap; /* Evita el salto de línea en el texto */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) cuando el texto desborda */
+    transition: background-color 0.3s ease; /* Transición de color de fondo al pasar el mouse */
+}
+
+
+
+.menu a:hover,
+.menu a:focus {
+    background-color: #7BB24D;
+    color: white;
+}
+
+.link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin: 5px 0;
+    text-transform: uppercase;
+    color: #7BB24D;
+    margin-top: 70px;
+}
+
+.link:hover,
+.link:focus {
+    text-decoration: underline;
+    color: 7BB24D;
+}
+
+.instagram {
+    width: 40px;
+    height: 40px;
+    background-image: url('img/ig2.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 30px;  
+   }
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia la dirección a columna */
+    }
+
+    .column-left {
+        display: none; /* Oculta la columna izquierda en dispositivos móviles */
+    }
+
+    .column-right {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+}
+
+/* Agrega estilos para el botón */
+.button-link {
+    margin-top: 30px;   
+    display: inline-block;
+    padding: 20px 40px; /* Ajusta el espaciado interior del botón según tus preferencias */
+    background-color: #7BB24D; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px; /* Borde redondeado del botón */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición de color de fondo al pasar el mouse */
+}
+
+.button-link:hover {
+    background-color: #6a9d3b; /* Cambia el color de fondo al pasar el mouse */
+}
